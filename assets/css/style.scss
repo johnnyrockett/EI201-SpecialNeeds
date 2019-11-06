@@ -1,0 +1,103 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$mq-mobile-landscape	: 480px !default;
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: bold; color: #efefef; }
+
+// Both portrait and landscape
+@mixin mobile-only {
+	@media (max-width : $mq-mobile-landscape) {
+		@content;
+	}
+}
+
+@include mobile-only {
+    .btn {
+        display: inline-block;
+        width: 45%;
+        margin: 1.5%;
+    }
+    .page-header {
+        background-size: 200% 200%;
+    }
+}
+
+@-webkit-keyframes BannerGradient {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@-moz-keyframes BannerGradient {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@keyframes BannerGradient {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+
+.page-header { color: #fff; text-align: center; background-color: #159957;
+    background: linear-gradient(323deg, #159957, #155799, #cd2c2c);
+    background-size: 200% 200%;
+
+    -webkit-animation: BannerGradient 11s ease infinite;
+    -moz-animation: BannerGradient 11s ease infinite;
+    animation: BannerGradient 11s ease infinite;
+}
+@media screen and (min-width: 64em) { .page-header { padding: 5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
+
+.row {
+    display: inline-flex;
+    text-align: justify;
+}
+
+.container {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: #353b3f;
+    text-align: center;
+    margin: 25px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+body {
+    background-color: #2a2e31;
+    // background-color: #1d222b;
+    color: #FFFFFF;
+}
+
+#dynamicheight
+{
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+// .unitImg {
+//     // width: 30%;
+// }
+
+// for images growing on hover
+.zoom {
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
