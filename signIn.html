@@ -12,6 +12,7 @@
   </head>
   <body>
 
+
     <!-- <script>
         $(function() {
             var div = $('#dynamicheight');
@@ -22,17 +23,19 @@
     </script> -->
 
     <main id="content" class="main-content" role="main">
-      <p style='text-align: center'>Sign In</p>
+      <h2 style='text-align: center'>Sign In</h2>
       <div class="card">
         <div class="container">
-            <form action="Submit()">
+            <form action="">
                 <label for="usrname">Username</label>
                 <input type="text" id="usrname" name="usrname" required>
             
                 <label for="psw">Password</label>
                 <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
-                <input type="submit" value="Submit">
+                <a href="./dashboard.html">
+                    <input type="submit" value="Submit">
+                </a>
             </form>
 
         </div>
@@ -45,6 +48,11 @@
                 <p id="length" class="invalid">Minimum <b>8 characters</b></p>
               </div>
       </div>
+
+      <div style='text-align: center;' class="container">
+          <p>Don't have an account?</p>
+        <input type="submit" value="Sign Up">
+        </div>
 
       <footer class="site-footer">
 
